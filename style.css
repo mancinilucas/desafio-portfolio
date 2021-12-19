@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
+
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+body {
+  max-height: 1767px;
+  max-width: 1440px;
+  background-color: var(--body-bg-color);
+  margin: 0 auto;
+}
+
+.container {
+  height: 104.3rem;
+  margin: 2.5rem 2.5rem 3.625rem;
+  display: grid;
+
+  grid-template-areas: 'aside main' 'footer footer';
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  gap: 3.75rem;
+}
+
+/* MAIN **********/
+main {
+  grid-area: main;
+  width: 59.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+/* PROJECT NAV */
+.project-nav {
+  width: 100%;
+  height: 5.375rem;
+  background-color: var(--bg-cards);
+  padding: 1.875rem;
+
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-nav h3 {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.project-nav a {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* GITHUB PROJECTS */
+.project-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.project {
+  height: 186px;
+  background-color: var(--bg-cards);
+  padding: 30px;
+  border-radius: 1.25rem;
+}
+
+.project-title {
+  display: flex;
+  gap: 1rem;
+  line-height: none;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.project-title img {
+  color: var(--text-color);
+}
+
+.project-title h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.project p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-github img {
+  margin-right: 8px;
+}
+
+.project-github span {
+  margin-right: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.project-tech {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.project-tech span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.recent-posts {
+  width: 100%;
+  height: 86px;
+  background-color: var(--bg-cards);
+  padding: 30px;
+  border-radius: 1.25rem;
+}
+
+.recent-posts h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.posts {
+  width: 100%;
+  height: 201px;
+  background-color: var(--bg-cards);
+  padding: 30px;
+  border-radius: 1.25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.posts h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.posts p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+/* ASIDE **********/
+aside {
+  grid-area: aside;
+
+  display: grid;
+  grid-template-areas:
+    'profile'
+    'links'
+    'tech'
+    'experiencies'
+    'education';
+  grid-template-columns: 21.75rem;
+}
+
+.profile,
+.links,
+.tech,
+.experiencies,
+.education {
+  background-color: var(--bg-cards);
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.links,
+.tech,
+.experiencies,
+.education {
+  margin-top: 1.875rem;
+}
+
+.profile {
+  height: 18.25rem;
+}
+
+.links {
+  height: 21.75rem;
+}
+
+.tech {
+  height: 13rem;
+}
+
+.experiencies {
+  height: 21.82rem;
+}
+
+.education {
+  height: 22rem;
+}
+
+/* FOOTER **********/
