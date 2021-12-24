@@ -9,6 +9,7 @@ Solução desenvolvida através trilha [Discover - Rocketseat](https://app.rocke
   - [Screenshot](#screenshot)
 - [My process](#my-process)
 - [Built with](#built-with)
+- [Continued development](#continued-development)
 
 ## Overview
 
@@ -35,3 +36,7 @@ O desafio é criar a página responsiva a partir do layout no Figma e tornar a p
 - Grid
 - Figma
 - Javascript
+
+### Continued development
+- Responsive design
+- Consume Github API
