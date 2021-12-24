@@ -53,6 +53,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .project-nav h3 {
   font-size: 1.25rem;
@@ -82,6 +84,7 @@ main {
   background-color: var(--bg-cards);
   padding: 30px;
   border-radius: 1.25rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .project-title {
@@ -112,6 +115,7 @@ main {
 .project-info {
   display: flex;
   justify-content: space-between;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .project-github img {
@@ -144,6 +148,7 @@ main {
   background-color: var(--bg-cards);
   padding: 30px;
   border-radius: 1.25rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .recent-posts h2 {
@@ -156,25 +161,60 @@ main {
   width: 100%;
   height: 201px;
   background-color: var(--bg-cards);
-  padding: 30px;
+
   border-radius: 1.25rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+
+  grid-template-areas: 'post-profile' 'post-text';
+  grid-template-columns: 178px 1fr;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.posts h3 {
+.post-profile {
+  grid-area: 'post-profile';
+
+  margin: 31px 20px 42px 30px;
+}
+
+.post-profile img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 10rem;
+  object-fit: cover;
+}
+
+.post-text h3 {
   font-size: 18px;
   font-weight: 700;
   color: var(--text-color);
+  margin-top: 30px;
+  margin-bottom: 6px;
 }
 
-.posts p {
+#post-date {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 28px;
+}
+
+#post-content {
   font-size: 16px;
   font-weight: 400;
   color: var(--text-color);
+  margin-bottom: 11px;
+}
+
+#post-tags {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#post-tags span {
+  margin-right: 10px;
 }
 
 /* ASIDE **********/
@@ -200,8 +240,6 @@ aside {
   border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .links,
@@ -211,24 +249,191 @@ aside {
   margin-top: 1.875rem;
 }
 
+/* PROFILE */
+
 .profile {
   height: 18.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
+.profile img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 10rem;
+  object-fit: cover;
+  border: 2px solid #00ff00;
+  margin-top: 2rem;
+}
+
+.profile h2 {
+  font-size: 1.43rem;
+  font-weight: 700;
+  color: var(--text-color);
+
+  margin-top: 1.875rem;
+}
+
+.profile p {
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: var(--text-color);
+  margin-top: 0.625rem;
+}
+
+/* LINKS */
 
 .links {
   height: 21.75rem;
+  padding: 1.875rem 2.5rem;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
+#social-links {
+  list-style: none;
+}
+
+#social-links ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#social-links li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+#social-links img {
+  width: 24px;
+}
+
+#social-links a {
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-left: 1.25rem;
+}
+
+/* TECH */
 
 .tech {
   height: 13rem;
+  padding: 1.875rem 1.25rem;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.tech h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1.25rem;
+}
+
+.tech-buttons tr {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.tech td {
+  width: 86px;
+  height: 24px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+
+  background-color: var(--bg-techs);
+  padding: 6px 0 7px;
+  border-radius: 1.875rem;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* EXPERIENCIES */
 .experiencies {
   height: 21.82rem;
+  padding: 1.875rem 1.25rem;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.experiencies h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1.25rem;
+}
+
+.experiencies ul {
+  margin-left: 2.5rem;
+  color: var(--text-color);
+}
+
+.exp-instituition {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.exp-date {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+.exp-title {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 0.9rem;
+}
+
+/* EDUCATIONS */
+
 .education {
-  height: 22rem;
+  height: 21.82rem;
+  padding: 1.875rem 1.25rem;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.education h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1.25rem;
+}
+
+.education ul {
+  margin-left: 2.5rem;
+  color: var(--text-color);
+}
+
+.edu-instituition {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.edu-date {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+.edu-title {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 0.9rem;
 }
 
 /* FOOTER **********/
