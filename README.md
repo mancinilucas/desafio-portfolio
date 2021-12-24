@@ -1,6 +1,6 @@
 # Desafio Discover - Portfólio
 
-Solução desenvolvida através trilha [Discover - Rocketseat](https://app.rocketseat.com.br/discover/challenges).
+Solução desenvolvida através da trilha [Discover - Rocketseat](https://app.rocketseat.com.br/discover/challenges).
 
 ## Table of contents
 
